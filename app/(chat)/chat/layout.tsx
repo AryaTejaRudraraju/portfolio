@@ -1,8 +1,9 @@
 import { cookies } from 'next/headers';
-
+// eslint-disable-next-line import/no-unresolved
 import { AppSidebar } from '@/components/app-sidebar';
+// eslint-disable-next-line import/no-unresolved
 import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
-import { auth } from '../(auth)/auth';
+import { auth } from '../../(auth)/auth';
 import Script from 'next/script';
 
 export const experimental_ppr = true;
