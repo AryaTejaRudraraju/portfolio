@@ -15,8 +15,8 @@ Before beginning the installation process, ensure you have the following prerequ
 ## Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/ai-chatbot.git
-cd ai-chatbot
+git clone https://github.com/AryaTejaRudraraju/portfoliov1.git
+cd portfoliov1
 ```
 
 ## Step 2: Install Dependencies

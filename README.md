@@ -53,6 +53,17 @@
 
 ## 🚀 Installation
 
+For detailed guide : [Installation Guide](docs/Installation.md)
+
+## Clone the Repository
+
+```bash
+git clone https://github.com/AryaTejaRudraraju/portfoliov1.git
+cd portfoliov1
+```
+
+## Install Dependencies
+
 This project uses React 19 (RC) and Next.js 15 (Canary). Due to potential dependency conflicts, use one of the following installation methods:
 
 ```bash
