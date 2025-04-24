@@ -23,7 +23,6 @@
 - **Reasoning Visualization**: See how the AI thinks through complex problems
 - **Artifact Generation**: Create code, documents, images, and more
 - **Tool Integration**: Weather information, document creation, and content suggestions
-- **Modern UI**: Responsive design with dark/light mode support
 - **Portfolio Integration**: Showcase your work alongside the AI assistant
 
 ## 📸 Screenshots
@@ -126,10 +125,10 @@ Build and start the production server:
 
 ```bash
 # Build the application
-pnpm build
+npm run build
 
 # Start the production server
-pnpm start
+npm run start
 ```
 
 ## 📚 Documentation
@@ -166,13 +165,6 @@ This application implements several security measures:
 
 For more details, see the [Security Documentation](docs/Security.md).
 
-## 📱 Responsive Design
-
-The application is fully responsive and works on:
-
-- Desktop computers
-- Tablets
-- Mobile devices
 
 ## 🔄 Continuous Integration
 
