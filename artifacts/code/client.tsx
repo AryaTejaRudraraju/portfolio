@@ -66,6 +66,30 @@ interface Metadata {
   outputs: Array<ConsoleOutput>;
 }
 
+// Add TypeScript declaration for Pyodide
+declare global {
+  interface Window {
+    loadPyodide?: (options: { indexURL: string }) => Promise<any>;
+  }
+}
+
+// Add this function to dynamically load Pyodide script
+const loadPyodideScript = async () => {
+  if (typeof window !== 'undefined' && !window.loadPyodide) {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js';
+    script.async = true;
+    
+    // Create a promise that resolves when the script is loaded
+    return new Promise<void>((resolve, reject) => {
+      script.onload = () => resolve();
+      script.onerror = () => reject(new Error('Failed to load Pyodide script'));
+      document.head.appendChild(script);
+    });
+  }
+  return Promise.resolve();
+};
+
 export const codeArtifact = new Artifact<'code', Metadata>({
   kind: 'code',
   description:
@@ -133,8 +157,15 @@ export const codeArtifact = new Artifact<'code', Metadata>({
         }));
 
         try {
-          // @ts-expect-error - loadPyodide is not defined
-          const currentPyodideInstance = await globalThis.loadPyodide({
+          // Load Pyodide script if not already loaded
+          await loadPyodideScript();
+          
+          // Now we can use loadPyodide
+          if (!window.loadPyodide) {
+            throw new Error('Failed to load Pyodide library');
+          }
+          
+          const currentPyodideInstance = await window.loadPyodide({
             indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.23.4/full/',
           });
 
