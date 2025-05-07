@@ -15,24 +15,24 @@ interface CardData {
 // Card data array
 const cardData: CardData[] = [
   {
-    title: "The Realization",
-    emoji: "✨",
-    content: "That evening in 2022 changed everything. Testing ChatGPT's limits, I witnessed something revolutionary—a system that mirrored human intuition with uncanny consistency. It wasn't just another algorithm; it represented a fundamental shift in what technology could achieve."
-  },
-  {
     title: "The Fascination",
     emoji: "🧠",
-    content: "For years I'd wondered how our minds transform random thoughts into coherent decisions. Now I was witnessing a mathematical model that offered glimpses into our own cognitive processes, making me feel like we were beginning to understand the mechanics of thought itself."
+    content: "For years I'd wondered how our minds transform random thoughts into coherent decisions. Now I was witnessing a mathematical model offering glimpses into our cognitive processes—making me feel we were beginning to understand the mechanics of thought itself. Each interaction revealed new depths to what seemed impossible just months before, challenging everything I thought I knew about human-machine capabilities."
+  },
+  {
+    title: "The Realization",
+    emoji: "✨",
+    content: "The pivotal moment came when I saw the pattern—what began with text was rapidly evolving to audio, then images, and ultimately multimodal intelligence. This wasn't just iterative improvement; it was an exponential expansion of possibilities. I realized we were standing at the threshold of applications once confined to science fiction: systems enabling blind individuals to navigate independently, personalized tools helping people with ADHD remember critical information exactly when needed, and business solutions that could automate previously unimaginable creative tasks."
   },
   {
     title: "The Possibilities",
     emoji: "🔍",
-    content: "I envisioned blind individuals navigating independently, people with ADHD receiving perfectly timed reminders, and businesses automating creative processes. We were stepping into uncharted territory, but the potential to unlock human capability seemed limitless."
+    content: "My mind raced with applications—systems that could assist visually impaired individuals to navigate independently, personalized tools for people with ADHD to receive perfectly timed reminders, and businesses automating creative processes that previously required extensive human effort.augmenting our limitations and amplifying our strengths. The real magic wasn't in replacing human creativity but in removing barriers to its expression. This technology could democratize capabilities once reserved for specialized experts, unlocking human potential in unprecedented ways."
   },
   {
     title: "The Transformation",
     emoji: "🚀",
-    content: "What started as curiosity evolved into obsession. I realized my business background wasn't a disadvantage—it was exactly what was needed: someone who could bridge technical capabilities with practical applications, translating AI potential into business value.",
+    content: "What started as curiosity evolved into obsession. I realized my business background wasn't a disadvantage it was exactly what was needed: someone who could bridge technical capabilities with practical applications. I quickly immersed myself in developing these systems and building agents that could actually get things done. Today, I translate AI potential into tangible business value, turning theoretical possibilities into practical solutions that deliver measurable results.",
     specialBorder: true
   }
 ];
@@ -188,7 +188,7 @@ const Card = ({
         } shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2`}
       >
         <div className="text-3xl text-teal-400 mb-4 text-center">{card.emoji}</div>
-        <p className="text-neutral-300">{card.content}</p>
+        <p className="text-justify text-neutral-300">{card.content}</p>
       </div>
     </motion.div>
   );
@@ -224,7 +224,7 @@ export const About = () => {
           <h2 className="text-4xl sm:text-5xl font-bold mb-3 relative inline-block">
             Where It All Began
             <motion.span 
-              className="absolute inset-x-1/4 h-1 bg-teal-400"
+              className="absolute bottom-0 inset-x-1/4 h-1 bg-teal-400"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
@@ -244,8 +244,8 @@ export const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <p className="text-lg text-center text-neutral-300">
-              Late 2022, I found myself captivated by ChatGPT&apos;s capabilities. What began as curiosity quickly transformed into a realization that my business background provided a unique advantage in the AI landscape—the ability to bridge technical possibilities with practical business applications.
+            <p className="text-lg text-justify text-neutral-300">
+            Late 2022, while navigating my MBA, I discovered something extraordinary in ChatGPT. As a marketer, I was stunned—not just by a helpful AI, but by its uncanny ability to predict my next words. What others saw as a clever tool, I recognized as a revolutionary copywriting system that would transform how we produce and consume content. My business background revealed a perspective many technologists missed: this wasn&apos;t just impressive tech—it was about to reshape entire industries.
             </p>
           </motion.div>
           

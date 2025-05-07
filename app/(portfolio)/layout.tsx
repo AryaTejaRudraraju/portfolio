@@ -87,7 +87,7 @@ export default async function Layout({
   return (
     <div lang="en" className="dark scroll-smooth">
       <div
-        className={`scroll-smooth bg-neutral-50 dark:bg-neutral-950 font-sans text-neutral-900 dark:text-neutral-300 selection:bg-neutral-1000 selection:text-neutral-50 dark:selection:bg-neutral-50 dark:selection:text-neutral-1000 ${inter.variable} ${poppins.variable} ${firaCode.variable}`}
+        className={`scroll-smooth bg-neutral-50 dark:bg-neutral-950 font-sans text-neutral-900 dark:text-neutral-300 selection:bg-purple-400 selection:text-white dark:selection:bg-purple-700 dark:selection:text-white ${inter.variable} ${poppins.variable} ${firaCode.variable}`}
       >
           <div className="relative">
           <BinaryCursor />
